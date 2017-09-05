@@ -23,14 +23,6 @@ const todos = (state = initState, action) => {
 
         case actionTypes.SUCCESS:
             return [...action.payload];
-        
-        case actionTypes.CHOOSE_FILTER:
-            if (action.payload === 1) {
-                newState = state.filter(v => v.compeleted);
-            } else if (action.payload === 2) {
-                newState = state.filter(v => !v.compeleted);
-            }
-            return newState;
         default:
             return state;
     }

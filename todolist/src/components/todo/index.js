@@ -5,7 +5,7 @@ const Todo = ({text, id, compeleted, compeleteTodo}) => {
         <li>
             {text}
             {compeleted ? <span>✓</span> : null}
-            <a href="#" onClick={() => compeleteTodo(id)}>完成</a>
+            <a href="#" onClick={() => compeleteTodo(id)}>标记完成</a>
         </li>
     );
 }

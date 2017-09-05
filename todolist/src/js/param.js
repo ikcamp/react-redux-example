@@ -1,4 +1,5 @@
 import bindActions from './bindActions';
+import {getDispalyedTodos} from './selector';
 
 const mapStateToProps = state => {
     let {filters, todos, baseInfo} = state;
@@ -13,7 +14,7 @@ const mapStateToProps = state => {
             chooseFilter
         },
         params_todos: {
-            todos,
+            todos: getDispalyedTodos(todos, filters),
             params_todoItem: {
                 compeleteTodo
             }
