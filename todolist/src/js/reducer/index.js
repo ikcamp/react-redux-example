@@ -1,8 +1,9 @@
-import filter from './filter';
+import {combineReducers} from 'redux';
+import filters from './filters';
 import todos from './todos';
 
 const rootReducer = combineReducers({
-    filter,
+    filters,
     todos
 });
 export default rootReducer;

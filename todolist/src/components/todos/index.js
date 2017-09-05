@@ -5,10 +5,10 @@ const Todos = ({todos, params_todoItem}) => {
     return (
         <ul>
             {todos.map(v =>{
-                return <Todo {...params_todoItem} key={v.id} />;
+                return <Todo {...v} {...params_todoItem} key={v.id} />;
             })}
         </ul>
     );
 }
 
-export default Todo;
+export default Todos;

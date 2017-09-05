@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Todo = ({}) => {
+const Todo = ({text, id, compeleted, compeleteTodo}) => {
     return (
-        <li></li>
+        <li>
+            {text}
+            {compeleted ? <span>✓</span> : null}
+            <a href="#" onClick={() => compeleteTodo(id)}>完成</a>
+        </li>
     );
 }
 
