@@ -1,4 +1,5 @@
-# react + redux todo list 项目示例
+# 《React技术栈耕耘 —— Redux》示例项目
+一个 react + redux 的 todo list 项目示例
 
 ## 如何运行示例？
 1. 安装 yarn： `npm i -g yarn`
