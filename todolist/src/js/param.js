@@ -1,14 +1,16 @@
 import bindActions from './bindActions';
 
-const mapState = state => {
-    let {filters, todos} = state;
-    const {addTodo, compeleteTodo} = bindActions;
+const mapStateToProps = state => {
+    let {filters, todos, baseInfo} = state;
+    const {addTodo, compeleteTodo, getTodos, chooseFilter} = bindActions;
+    const {isLoading} = baseInfo;
     return {
-        params_adder: {
-            addTodo
-        },
+        isLoading,
+        getTodos,
+        addTodo,
         params_filter: {
-            filters
+            filters,
+            chooseFilter
         },
         params_todos: {
             todos,
@@ -18,4 +20,4 @@ const mapState = state => {
         },
     };
 }
-export default mapState;
+export default mapStateToProps;
