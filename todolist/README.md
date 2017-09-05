@@ -21,3 +21,6 @@
     - store.js Redux store 创建文件
   - App.js 应用顶层组件／渲染文件
   - index.js 入口文件
+  
+  文章入口：
+    - SegmentFault: https://segmentfault.com/a/1190000010951171
