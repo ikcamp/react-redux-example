@@ -3,10 +3,16 @@ import React from 'react';
 const Filter = ({filters}) => {
     return (
         <div>
-            筛选：
+            点击筛选：
             <ul>
-                {filters.map(v => {
-                    return <li key={v.text}>{v.text}</li>
+                {filters.map((v, i) => {
+                    return (
+                        <span key={v.text}>
+                            {v.text}
+                            {v.selected ? <span>✓</span> : null}
+                            {i !== filters.length - 1 ? ' | ' : null}
+                        </span>
+                    );
                 })}
             </ul>
         </div>
